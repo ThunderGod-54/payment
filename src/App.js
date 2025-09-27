@@ -53,7 +53,7 @@ const UpiModalContent = ({ paymentStatus, onInitiatePayment }) => {
                 </div>
                 {!isQrExpired && <div className="qr-timer">Expires in: {countdown}s</div>}
             </div>
-            <p className="upi-id">or pay to <strong>example-upi@okhdfcbank</strong></p>
+            <p className="upi-id">or pay to <strong>agriai-example@okaxisbank</strong></p>
 
             <div className="payment-status-container">
                 {paymentStatus === 'idle' && !isQrExpired && (
