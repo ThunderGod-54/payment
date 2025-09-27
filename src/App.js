@@ -15,7 +15,7 @@ const UpiModalContent = ({ paymentStatus, onInitiatePayment }) => {
         'https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=upi://pay?pa=example-two@upi'
     ];
     const [currentQrIndex, setCurrentQrIndex] = useState(0);
-    const [countdown, setCountdown] = useState(5);
+    const [countdown, setCountdown] = useState(10);
     const [isQrExpired, setIsQrExpired] = useState(false);
 
     useEffect(() => {
@@ -29,7 +29,7 @@ const UpiModalContent = ({ paymentStatus, onInitiatePayment }) => {
 
     const handleRegenerate = () => {
         setCurrentQrIndex(prevIndex => (prevIndex + 1) % 2); // Toggles between 0 and 1
-        setCountdown(5); // Reset timer
+        setCountdown(10); // Reset timer
         setIsQrExpired(false);
     };
 
